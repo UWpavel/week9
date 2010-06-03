@@ -1,0 +1,24 @@
+%html
+	%head
+		%title Homework week9, Pavel Snagovsky
+	%body
+		
+	%h4= session[:msg]
+
+	%h3 You must login.
+
+	%form(method='post' action='/login')
+		%lable 
+			Username:  
+		%input(type='text' name='username')
+		%br
+
+		%lable 
+			Password:
+		%input(type='password' name='password')
+		%br
+
+		%input(type='submit' value="Login")
+		
+		%p
+			<a href="/signin">New User signin.</a>

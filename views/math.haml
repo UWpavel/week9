@@ -1,0 +1,16 @@
+%h4
+	Enter a math problem into the field bellow. 
+	%br
+	Your input should consist [0-9], (), +, -, *, /, .
+	
+	%form(method='post' action='/math') 
+		%input(type='text' name='problem')
+		%br
+
+		%input(type='submit' value="Submit")
+		%p
+
+%p		
+	Last result: #{session[:last_msg]}
+	%br	
+	You have #{session[:solved_problems]} problems solved.

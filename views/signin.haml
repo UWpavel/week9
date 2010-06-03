@@ -1,0 +1,22 @@
+%html
+	%head
+		%title Homework week9, Pavel Snagovsky
+	%body
+
+	%h3 New user signin.
+
+	%form(method='post' action='/signin')
+		%lable 
+			Username:  
+		%input(type='text' name='username')
+		%br
+
+		%lable 
+			Password:
+		%input(type='password' name='password')
+		%br
+
+		%input(type='submit' value="Signin")
+		
+		%p
+			<a href="/login">Login page.</a>

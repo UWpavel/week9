@@ -1,0 +1,20 @@
+%html
+	%head
+		%title Homework week9, Pavel Snagovsky
+	%body
+	
+	-if defined? @msg	
+		%h4= @msg
+	
+	%p
+		= "Logged in as: \'#{session[:user]}\'"
+		
+	= yield
+		
+	%p
+		%form(method='post' action='/logout')
+			%input(type='submit' value='Logout')
+		- my_routes.each do |link|
+			<a href="/#{link.downcase}">#{link}</a>
+			
+

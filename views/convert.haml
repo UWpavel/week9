@@ -1,0 +1,6 @@
+%h3 Converting page.
+%p Select units to convert:
+		
+%select{:name => "convert"} 
+  - @convert.each_key do |metric| 
+    %option{ :selected => metric == @page.metric}= h metric

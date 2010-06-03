@@ -1,0 +1,6 @@
+%h2 
+	Statistics for
+	= session[:user]
+%p
+	- session.each_key do |metric|
+		#{metric.to_s.gsub(/\_/," ").capitalize}: #{session[metric]}
